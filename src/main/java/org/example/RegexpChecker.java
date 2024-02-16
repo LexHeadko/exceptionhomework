@@ -11,7 +11,7 @@ public class RegexpChecker implements Checker {
 
     @Override
     public void checkPassword(String password) throws WrongPasswordException {
-        if (password.matches(REGEXP)) {
+        if (!password.matches(REGEXP)) {
             throw new WrongPasswordException("Неправильная длина или количество символов!");
         }
     }
